@@ -1,0 +1,191 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background: linear-gradient(to bottom, #DCD6F7, #FDF6FD) fixed;
+  display: flex;
+  justify-content: center;
+}
+
+.bgLogin {
+  margin-top: 50px;
+  border-radius: 50px;
+  box-shadow: 20px 20px 50px #DCD6F7;
+  width: 751px;
+  height: 820px;
+}
+
+.bgSignup {
+  margin-top: 20px;
+  border-radius: 50px;
+  box-shadow: 20px 20px 50px #DCD6F7;
+  width: 751px;
+  height: 894px;
+}
+
+.login {
+  display: flex;
+  flex-direction: column;
+}
+
+.signup {
+  display: flex;
+  flex-direction: column;
+}
+
+.title-login,
+.title-signup {
+  margin-top: 100px;
+  margin-bottom: 50px;
+  text-align: center;
+}
+
+.content {
+  margin-left: 87px;
+  display: grid;
+  gap: 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+input {
+  border: none;
+  border-radius: 50px;
+  width: 527px;
+  height: 80px;
+  padding: 0 0 0 50px;
+}
+
+::-webkit-input-placeholder {
+  color: #64748b;
+}
+
+input:focus {
+  box-shadow: 0 0 0 0;
+  border: 2px solid #424874;
+  outline: 0;
+}
+
+.password {
+  position: relative;
+}
+
+.password::after {
+  content: '';
+  position: absolute;
+  display: block;
+  background: url('../icons/visibility_off.svg') no-repeat;
+  width: 40px;
+  height: 40px;
+  top: 65px;
+  right: 130px;
+}
+
+.login-button,
+.signup-button {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 30px;
+  margin-left: 87px;
+}
+
+button {
+  border: none;
+  border-radius: 50px;
+  width: 577px;
+  height: 80px;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+button::before {
+  content: '';
+  width: 0;
+  height: 577px;
+  position: absolute;
+  display: block;
+  top: 0;
+  left: 0;
+  background: linear-gradient(to right, rgba(217, 172, 245, 1), rgba(255, 206, 254, 1));
+  transition: .5s ease;
+  z-index: -1;
+}
+
+button:hover::before {
+  width: 577px;
+}
+
+.textFinal {
+  text-align: center;
+}
+
+.link:hover {
+  color: #64748b;
+}
+
+@media (max-width: 390px) {
+  body {
+    background-color: #f4eeff;
+  }
+  .bgLogin {
+    box-shadow: 0;
+    border-radius: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  .bgSignup {
+    border-radius: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  .titleLogin {
+    font-size: 32px;
+  }
+  label {
+    font-size: 16px;
+  }
+  input {
+    width: 295px;
+    height: 40px;
+    padding: 0 0 0 30px;
+    font-size: 14px;
+  }
+  ::-webkit-input-placeholder {
+    font-size: 20px;
+  }
+  .password::after {
+    content: '';
+    position: absolute;
+    display: block;
+    background: url('../icons/visibility_off-20px.svg') no-repeat;
+    width: 20px;
+    height: 20px;
+    top: 55px;
+    right: 60px;
+  }
+  .content {
+    margin-left: 30px;
+  }
+  .link {
+    font-size: 16px;
+  }
+  button {
+    width: 325px;
+    height: 40px;
+  }
+  .login-button,
+  .signup-button {
+    margin-left: 30px;
+  }
+  .textFinal {
+    font-size: 16px;
+  }
+}
