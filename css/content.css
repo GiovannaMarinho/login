@@ -4,7 +4,7 @@
 }
 
 body {
-  background: linear-gradient(to bottom, #DCD6F7, #FDF6FD) fixed;
+  background: linear-gradient(to bottom, #dcd6f7, #fdf6fd) fixed;
   display: flex;
   justify-content: center;
 }
@@ -12,7 +12,7 @@ body {
 .bgLogin {
   margin-top: 50px;
   border-radius: 50px;
-  box-shadow: 20px 20px 50px #DCD6F7;
+  box-shadow: 20px 20px 50px #dcd6f7;
   width: 751px;
   height: 820px;
 }
@@ -20,7 +20,7 @@ body {
 .bgSignup {
   margin-top: 20px;
   border-radius: 50px;
-  box-shadow: 20px 20px 50px #DCD6F7;
+  box-shadow: 20px 20px 50px #dcd6f7;
   width: 751px;
   height: 894px;
 }
@@ -76,10 +76,10 @@ input:focus {
 }
 
 .password::after {
-  content: '';
+  content: "";
   position: absolute;
   display: block;
-  background: url('../icons/visibility_off.svg') no-repeat;
+  background: url("../icons/visibility_off.svg") no-repeat;
   width: 40px;
   height: 40px;
   top: 65px;
@@ -107,15 +107,19 @@ button {
 }
 
 button::before {
-  content: '';
+  content: "";
   width: 0;
   height: 577px;
   position: absolute;
   display: block;
   top: 0;
   left: 0;
-  background: linear-gradient(to right, rgba(217, 172, 245, 1), rgba(255, 206, 254, 1));
-  transition: .5s ease;
+  background: linear-gradient(
+    to right,
+    rgba(217, 172, 245, 1),
+    rgba(255, 206, 254, 1)
+  );
+  transition: 0.5s ease;
   z-index: -1;
 }
 
@@ -131,7 +135,26 @@ button:hover::before {
   color: #64748b;
 }
 
-@media (max-width: 390px) {
+@media (max-width: 712px) {
+  .bgLogin {
+    width: 650px;
+  }
+  .bgSignup {
+    width: 751px;
+  }
+  .content {
+    margin-left: 40px;
+  }
+  .login-button,
+  .signup-button {
+    margin-left: 40px;
+  }
+  .password::after {
+    right: 80px;
+  }
+}
+
+@media (max-width: 414px) {
   body {
     background-color: #f4eeff;
   }
@@ -153,7 +176,7 @@ button:hover::before {
     font-size: 16px;
   }
   input {
-    width: 295px;
+    width: 330px;
     height: 40px;
     padding: 0 0 0 30px;
     font-size: 14px;
@@ -162,10 +185,10 @@ button:hover::before {
     font-size: 20px;
   }
   .password::after {
-    content: '';
+    content: "";
     position: absolute;
     display: block;
-    background: url('../icons/visibility_off-20px.svg') no-repeat;
+    background: url("../icons/visibility_off-20px.svg") no-repeat;
     width: 20px;
     height: 20px;
     top: 55px;
@@ -178,7 +201,7 @@ button:hover::before {
     font-size: 16px;
   }
   button {
-    width: 325px;
+    width: 360px;
     height: 40px;
   }
   .login-button,
@@ -187,5 +210,55 @@ button:hover::before {
   }
   .textFinal {
     font-size: 16px;
+  }
+}
+
+@media (max-width: 390px) {
+  input {
+    width: 295px;
+    height: 40px;
+    padding: 0 0 0 30px;
+    font-size: 14px;
+  }
+  ::-webkit-input-placeholder {
+    font-size: 20px;
+  }
+  .password::after {
+    content: "";
+    position: absolute;
+    display: block;
+    background: url("../icons/visibility_off-20px.svg") no-repeat;
+    width: 20px;
+    height: 20px;
+    top: 55px;
+    right: 60px;
+  }
+  .content {
+    margin-left: 30px;
+  }
+  button {
+    width: 325px;
+    height: 40px;
+  }
+}
+
+@media (max-width: 320px) {
+  input {
+    width: 260px;
+    height: 40px;
+    padding: 0 0 0 20px;
+  }
+  .password::after {
+    right: 40px;
+  }
+  .content {
+    margin-left: 20px;
+  }
+  button {
+    width: 280px;
+  }
+  .login-button,
+  .signup-button {
+    margin-left: 20px;
   }
 }
